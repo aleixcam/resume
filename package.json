@@ -1,0 +1,20 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "My Résumé",
+  "author": "Aleix Caminal",
+  "scripts": {
+    "watch": "sass --watch assets/styles"
+  },
+  "bugs": {
+    "url": "https://github.com/aleixcam/resume/issues"
+  },
+  "homepage": "https://github.com/aleixcam/resume#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleixcam/resume.git"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10"
+  }
+}
