@@ -62,6 +62,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #fff;
 }
 
 .profile {
@@ -176,10 +177,6 @@ body {
             justify-content: space-between;
             margin: 0;
 
-            &:nth-child(even) {
-                color: lighten($color-secondary, 25%);
-            }
-
             &>span {
                 font-weight: 600;
             }
@@ -222,8 +219,22 @@ main {
 
         &__timeline {
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             color: $color-primary;
+        }
+
+        &__stack {
+            margin-bottom: 10px;
+
+            &>span {
+                display: inline-block;
+                background-color: $color-secondary;
+                color: #fff;
+                font-size: 0.80em;
+                line-height: 20px;
+                border-radius: 10px;
+                padding: 0 7.5px;
+            }
         }
     }
 }

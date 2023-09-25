@@ -42,21 +42,7 @@ body main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-.qr--linkedin {
-  background-image: url("../images/qr_linkedin.svg");
-}
-.qr--gitlab {
-  background-image: url("../images/qr_gitlab.svg");
-}
-.qr--github {
-  background-image: url("../images/qr_github.svg");
-}
-.qr--npm {
-  background-image: url("../images/qr_npm.svg");
-}
-.qr--docker {
-  background-image: url("../images/qr_docker.svg");
+  background-color: #fff;
 }
 
 .profile {
@@ -69,7 +55,6 @@ body main {
   height: 180px;
   overflow: hidden;
   border-radius: 10px;
-  background-image: url("../images/profile.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -158,9 +143,6 @@ body main {
   justify-content: space-between;
   margin: 0;
 }
-.sidebar .article__items > *:nth-child(even) {
-  color: #d8dadc;
-}
 .sidebar .article__items > * > span {
   font-weight: 600;
 }
@@ -194,8 +176,20 @@ main .job__workplace {
 }
 main .job__timeline {
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #0c7cd5;
+}
+main .job__stack {
+  margin-bottom: 10px;
+}
+main .job__stack > span {
+  display: inline-block;
+  background-color: #959a9f;
+  color: #fff;
+  font-size: 0.8em;
+  line-height: 20px;
+  border-radius: 10px;
+  padding: 0 7.5px;
 }
 
 .download {
