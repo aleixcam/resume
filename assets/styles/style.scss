@@ -62,26 +62,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    &--linkedin {
-        background-image: url('../images/qr_linkedin.svg');
-    }
-
-    &--gitlab {
-        background-image: url('../images/qr_gitlab.svg');
-    }
-
-    &--github {
-        background-image: url('../images/qr_github.svg');
-    }
-
-    &--npm {
-        background-image: url('../images/qr_npm.svg');
-    }
-
-    &--docker {
-        background-image: url('../images/qr_docker.svg');
-    }
 }
 
 .profile {
@@ -94,7 +74,6 @@ body {
         height: 180px;
         overflow: hidden;
         border-radius: 10px;
-        background-image: url('../images/profile.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
