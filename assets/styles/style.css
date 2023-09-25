@@ -1,34 +1,36 @@
-main .section .job, main .section {
-  margin: 0 0 25px 0;
-  border-left: 2px solid;
-  padding-left: 25px;
-}
-
 body {
+  font-family: TT Commons, Roboto, Oxygen, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+body #resume {
+  width: 1240px;
+  width: 1240px;
+  margin: auto;
   width: 1240px;
   margin: auto;
   display: grid;
+  margin: auto;
   grid-template: 240px auto/240px auto;
-  font-family: TT Commons, Roboto, Oxygen, "Helvetica Neue", sans-serif;
+  min-height: 1754px;
 }
-body > .profile {
+body .profile {
   background-color: #0c7cd5;
   grid-column: 1;
   grid-row: 1;
   border-bottom: 12px solid #fff;
 }
-body > header {
+body header {
   grid-column: 2;
   grid-row: 1;
   border-bottom: 12px solid #0c7cd5;
 }
-body > .sidebar {
+body .sidebar {
   background-color: #0c7cd5;
   color: #fff;
   grid-column: 1;
   grid-row: 2;
 }
-body > main {
+body main {
   grid-column: 2;
   grid-row: 2;
 }
@@ -113,50 +115,68 @@ body > main {
   bottom: 0;
 }
 
-.sidebar {
-  padding: 25px 15px;
+.section {
+  margin-bottom: 20px;
 }
-.sidebar__section__title {
+.section__title {
   margin: 0;
   margin-bottom: 20px;
   font-size: 1.5em;
   font-weight: 400;
   padding-bottom: 5px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #000;
 }
-.sidebar__section__subtitle {
+.section .article {
+  margin-bottom: 20px;
+}
+.section .article__title {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 1.25em;
   font-weight: 400;
 }
-.sidebar__section__items {
+.section .article__items {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.sidebar {
+  padding: 25px 15px;
+}
+.sidebar .section__title {
+  border-bottom: 2px solid #fff;
+}
+.sidebar .article__items {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-bottom: 20px;
+  padding: 0;
+  list-style-type: none;
 }
-.sidebar__section__items > *:not(h4) {
+.sidebar .article__items > * {
   display: flex;
   justify-content: space-between;
   margin: 0;
 }
-.sidebar__section__items > *:not(h4) > span {
+.sidebar .article__items > *:nth-child(even) {
+  color: #d8dadc;
+}
+.sidebar .article__items > * > span {
   font-weight: 600;
 }
-.sidebar__section .portfolio {
+.sidebar .portfolio {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   font-style: normal;
 }
-.sidebar__section .portfolio > * {
+.sidebar .portfolio > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
-.sidebar__section .portfolio > * a {
+.sidebar .portfolio > * a {
   color: #fff;
   text-decoration: none;
   margin-top: 5px;
@@ -165,28 +185,42 @@ body > main {
 main {
   padding: 25px;
 }
-main .section__title {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 1.75em;
-}
-main .section .job__title {
-  margin: 0;
+main .job .article__title {
   margin-bottom: 5px;
-  font-size: 1.25em;
 }
-main .section .job__title--workplace {
+main .job__workplace {
   font-size: 0.75em;
-  font-weight: 400;
   color: #959a9f;
 }
-main .section .job__timeline {
-  font-size: 1em;
+main .job__timeline {
+  display: inline-block;
+  margin-bottom: 10px;
   color: #0c7cd5;
 }
-main .section .job__tasks, main .section .job__description {
-  margin: 0;
-  margin-top: 12px;
+
+.download {
+  position: sticky;
+  bottom: 20px;
+  display: flex;
+  justify-content: end;
+  margin: 0 20px;
+}
+.download__button {
+  border: none;
+  border-radius: 10px;
+  background-color: #0c7cd5;
+  color: #fff;
+  padding: 15px;
+  font-size: 16px;
+  transition: all 0.1s linear;
+}
+.download__button:hover {
+  background-color: #0d82df;
+  cursor: pointer;
+}
+.download__button:active {
+  background-color: #0e8df1;
+  transition: none;
 }
 
 /*# sourceMappingURL=style.css.map */

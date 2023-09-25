@@ -13,14 +13,22 @@ $color-secondary: #959a9f;
 }
 
 body {
-    width: 1240px;
-    margin: auto;
-    display: grid;
-    grid-template: 240px auto / 240px auto;
     font-family: TT Commons, Roboto, Oxygen, 'Helvetica Neue', sans-serif;
+    margin: 0;
 
+    #resume {
+        width: 1240px;
+        width: 1240px;
+        margin: auto;
+        width: 1240px;
+        margin: auto;
+        display: grid;
+        margin: auto;
+        grid-template: 240px auto / 240px auto;
+        min-height: 1754px;
+    }
 
-    &>.profile {
+    .profile {
         background-color: $color-primary;
         grid-column: 1;
         grid-row: 1;
@@ -28,20 +36,20 @@ body {
 
     }
 
-    &>header {
+    header {
         grid-column: 2;
         grid-row: 1;
         border-bottom: 12px solid $color-primary;
     }
 
-    &>.sidebar {
+    .sidebar {
         background-color: $color-primary;
         color: #fff;
         grid-column: 1;
         grid-row: 2;
     }
 
-    &>main {
+    main {
         grid-column: 2;
         grid-row: 2;
     }
@@ -141,60 +149,80 @@ body {
     }
 }
 
-.sidebar {
-    padding: 25px 15px;
+.section {
+    margin-bottom: 20px;
 
-    &__section {
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        font-weight: 400;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #000;
+    }
+
+    .article {
+        margin-bottom: 20px;
+
         &__title {
             margin: 0;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-            font-weight: 400;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #fff;
-        }
-
-        &__subtitle {
-            margin: 0;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             font-size: 1.25em;
             font-weight: 400;
         }
 
         &__items {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.sidebar {
+    padding: 25px 15px;
+
+    .section__title {
+        border-bottom: 2px solid #fff;
+    }
+
+    .article__items {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0;
+        list-style-type: none;
+
+        &>* {
             display: flex;
-            flex-direction: column;
-            gap: 5px;
-            margin-bottom: 20px;
+            justify-content: space-between;
+            margin: 0;
 
-            &>*:not(h4) {
-                display: flex;
-                justify-content: space-between;
-                margin: 0;
+            &:nth-child(even) {
+                color: lighten($color-secondary, 25%);
+            }
 
-                &>span {
-                    font-weight: 600;
-                }
+            &>span {
+                font-weight: 600;
             }
         }
+    }
 
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            font-style: normal;
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-style: normal;
 
-            &>* {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 20px;
+        &>* {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
 
-                & a {
-                    color: #fff;
-                    text-decoration: none;
-                    margin-top: 5px;
-                }
+            & a {
+                color: #fff;
+                text-decoration: none;
+                margin-top: 5px;
             }
         }
     }
@@ -203,73 +231,48 @@ body {
 main {
     padding: 25px;
 
-    .section {
-        @extend %section;
-
-        &__title {
-            margin: 0;
-            margin-bottom: 10px;
-            font-size: 1.75em;
+    .job {
+        .article__title {
+            margin-bottom: 5px;
         }
 
-        .job {
-            @extend %section;
+        &__workplace {
+            font-size: 0.75em;
+            color: $color-secondary;
+        }
 
-            &__title {
-                margin: 0;
-                margin-bottom: 5px;
-                font-size: 1.25em;
-
-                &--workplace {
-                    font-size: 0.75em;
-                    font-weight: 400;
-                    color: $color-secondary;
-                }
-            }
-
-            &__timeline {
-                font-size: 1em;
-                color: $color-primary;
-            }
-
-            &__tasks,
-            &__description {
-                margin: 0;
-                margin-top: 12px;
-            }
+        &__timeline {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: $color-primary;
         }
     }
 }
 
-// @media (max-width: 720px) {
-//     body {
-//         grid-template: auto auto auto / 1fr;
-//         & > aside {
-//            grid-column: 1;
-//            grid-row: 3;
-//            margin-top: -2rem;
-//        }
-//     }
-// }
+.download {
+    position: sticky;
+    bottom: 20px;
+    display: flex;
+    justify-content: end;
+    margin: 0 20px;
 
-// @media (max-width: 540px) {
-//     body > header {
-//         grid-template: auto 1fr / 1fr;
-//         grid-gap: 0.5rem;
-//     }
+    &__button {
+        border: none;
+        border-radius: 10px;
+        background-color: $color-primary;
+        color: #fff;
+        padding: 15px;
+        font-size: 16px;
+        transition: all .1s linear;
 
-//     .profile__image {
-//         width: 10rem;
-//         height: 10rem;
-//     }
+        &:hover {
+            background-color: lighten($color-primary, 2%);
+            cursor: pointer;
+        }
 
-//     .contact {
-//         grid-column: 1;
-//         grid-row: 2;
-//         margin: 0;
-
-//         &--bottom {
-//             margin: 1rem 0 0 0;
-//         }
-//     }
-// }
+        &:active {
+            background-color: lighten($color-primary, 6%);
+            transition: none;
+        }
+    }
+}

@@ -6,215 +6,229 @@
 
     <link rel="stylesheet" href="assets/styles/style.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="assets/js/pdf.js"></script>
 
     <title>Curriculum Vitae</title>
 </head>
 
 <body>
-    <aside class="profile">
-        <div class="profile__image"></div>
-    </aside>
+    <div id="resume">
+        <aside class="profile">
+            <div class="profile__image"></div>
+        </aside>
 
-    <header class="contact">
-        <section class="title">
-            <h1 class="title__name">Aleix Caminal i Mallol</h1>
-            <h3 class="title__profession">Software Engineer</h3>
-        </section>
+        <header class="contact">
+            <section class="title">
+                <h1 class="title__name">Aleix Caminal i Mallol</h1>
+                <h3 class="title__profession">Software Engineer</h3>
+            </section>
 
-        <address class="contact-info">
-            <p>Location: Barcelona</p>
-            <p>Email: <a href="mailto:aleixcam96@gmail.com">aleixcam96@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/aleixcam/">www.linkedin.com/in/aleixcam</a></p>
-            <div class="qr qr--linkedin"></div>
-        </address>
-    </header>
-
-    <aside class="sidebar">
-        <section class="sidebar__section">
-            <h2 class="sidebar__section__title">Experience</h2>
-            <article class="sidebar__section__items">
-                <h4 class="sidebar__section__subtitle">Back-end</h4>
-                <p>PHP<span>6 Years</span></p>
-                <p>MySQL<span>6 Years</span></p>
-                <p>Symfony<span>4 Years</span></p>
-                <p>Doctrine<span>4 Years</span></p>
-                <p>MongoDB<span>3 Years</span></p>
-                <p>Java<span>2 Years</span></p>
-                <p>Kotlin<span>2 Years</p>
-                <p>Spring<span>2 Years</p>
-                <p>Node<span>2 Years</p>
-                <p>Express<span>2 Years</p>
-                <p>Mongoose<span>2 Years</p>
-                <p>Go<span>1 Year</p>
-            </article>
-            <article class="sidebar__section__items">
-                <h4 class="sidebar__section__subtitle">Front-end</h4>
-                <p>JavaScript<span>6 Years</span></p>
-                <p>HTML<span>5 Years</p>
-                <p>CSS<span>5 Years</p>
-                <p>TypeScript<span>3 Years</span></p>
-                <p>SASS<span>3 Years</span></p>
-                <p>React<span>3 Years</span></p>
-                <p>Next.js<span>2 Years</span></p>
-                <p>Storybook<span>1 Year</span></p>
-            </article>
-        </section>
-
-        <section class="sidebar__section">
-            <h2 class="sidebar__section__title">Languages</h2>
-            <article class="sidebar__section__items">
-                <p>Catalan<span>Native</span></p>
-                <p>Spanish<span>Native</span></p>
-                <p>English<span>Advanced</span></p>
-            </article>
-        </section>
-
-        <section class="sidebar__section">
-            <h2 class="sidebar__section__title">Portfolio</h2>
-            <address class="portfolio">
-                <article>
-                    <div class="qr qr--gitlab"></div>
-                    <a href="https://gitlab.com/aleixcam">GitLab</a>
-                </article>
-                <article>
-                    <div class="qr qr--github"></div>
-                    <a href="https://github.com/aleixcam">GitHub</a>
-                </article>
-                <article>
-                    <div class="qr qr--npm"></div>
-                    <a href="https://www.npmjs.com/~aleixcam">NPM</a>
-                </article>
-                <article>
-                    <div class="qr qr--docker"></div>
-                    <a href="https://hub.docker.com/?namespace=aleixcam">Docker Hub</a>
-                </article>
+            <address class="contact-info">
+                <p>Location: Barcelona</p>
+                <p>Email: <a href="mailto:aleixcam96@gmail.com">aleixcam96@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/aleixcam/">www.linkedin.com/in/aleixcam</a></p>
+                <div class="qr qr--linkedin"></div>
             </address>
-        </section>
-    </aside>
+        </header>
 
-    <main>
-        <section class="section">
-            <h2 class="section__title">Work Experience</h2>
-            <article class="job">
-                <h3 class="job__title">
-                    Associate & Tech Lead
-                    <small class="job__title--workplace">at HexMyth</small>
-                </h3>
-                <time class="job__timeline">October 2020 - Present</time>
-                <ul class="job__tasks">
-                    <li>Making long-lasting architectural decisions</li>
-                    <li>Creating an API from scratch with Symfony 5 and PHP 7.4</li>
-                    <li>Creating a component library with React and StoryBook</li>
-                    <li>Creating a web front with Next.js and TypeScript</li>
-                    <li>Hexagonal Architecture</li>
-                    <li>Creating Docker images to develop</li>
-                    <li>TDD as a way of life</li>
-                    <li>CI/CD using GitLab pipelines</li>
-                    <li>Use of GitLab Container and Package Registries</li>
-                </ul>
-            </article>
-            <article class="job">
-                <h3 class="job__title">
-                    Full-stack Engineer
-                    <small class="job__title--workplace">at Meeting Lawyers</small>
-                </h3>
-                <time class="job__timeline">January 2023 - July 2023</time>
-            </article>
-            <article class="job">
-                <h3 class="job__title">
-                    Back-end Engineer
-                    <small class="job__title--workplace">at Adevinta</small>
-                </h3>
-                <time class="job__timeline">July 2021 - December 2022</time>
-            </article>
-            <article class="job">
-                <h3 class="job__title">
-                    Freelancer Back-end Principal
-                    <small class="job__title--workplace">at Atrox Creative</small>
-                </h3>
-                <time class="job__timeline">January 2020 - June 2021</time>
-            </article>
-            <article class="job">
-                <h3 class="job__title">
-                    Back-end Developer
-                    <small class="job__title--workplace">at Deliverea</small>
-                </h3>
-                <time class="job__timeline">May 2020 - August 2020</time>
-                <ul class="job__tasks">
-                    <li>A bucketload of refactoring</li>
-                    <li>REST APIs with PHP 7 and Symfony</li>
-                    <li>VUEjs and Vuex</li>
-                    <li>Hexagonal Architecture</li>
-                    <li>TDD as a way of life</li>
-                </ul>
-            </article>
-            <article class="job">
-                <h3 class="job__title">
-                    Back-end Developer
-                    <small class="job__title--workplace">at Atrápalo</small>
-                </h3>
-                <time class="job__timeline">January 2019 - April 2020</time>
-                <ul class="job__tasks">
-                    <li>Hexagonal Architecture</li>
-                    <li>TDD as a way of life</li>
-                    <li>REST APIs with PHP 7 and Symfony 3 and 4</li>
-                    <li>Mantain a legacy monolith with PHP 5 and Symfony 2</li>
-                    <li>Write reusable components with JS ES6 and SASS</li>
-                    <li>Code revision</li>
-                    <li>Best practices at everything</li>
-                </ul>
-            </article>
-            <article class="job">
-                <h3 class="job__title">
-                    Junior Back-end Developer
-                    <small class="job__title--workplace">at Buzz MN</small>
-                </h3>
-                <time class="job__timeline">March 2017 - June 2018</time>
-                <ul class="job__tasks">
-                    <li>Jumpstart a new project with CakePHP</li>
-                    <li>Design and structure a MySQL database</li>
-                    <li>Support to front end</li>
-                </ul>
-            </article>
-            <article class="job">
-                <h3 class="job__title">
-                    Helpdesk Intern
-                    <small class="job__title--workplace">at NH Hotel Group</small>
-                </h3>
-                <time class="job__timeline">February 2015 - June 2015</time>
-            </article>
-        </section>
+        <aside class="sidebar">
+            <section class="section">
+                <h2 class="section__title">Experience</h2>
+                <article class="article">
+                    <h4 class="article__title">Back-end</h4>
+                    <ol class="article__items">
+                        <li>PHP<span>6 Years</span></li>
+                        <li>MySQL<span>6 Years</span></li>
+                        <li>Symfony<span>4 Years</span></li>
+                        <li>Doctrine<span>4 Years</span></li>
+                        <li>MongoDB<span>3 Years</span></li>
+                        <li>Java<span>2 Years</span></li>
+                        <li>Kotlin<span>2 Years</li>
+                        <li>Spring<span>2 Years</li>
+                        <li>Node<span>2 Years</li>
+                        <li>Express<span>2 Years</li>
+                        <li>Mongoose<span>2 Years</li>
+                        <li>Go<span>1 Year</li>
+                    </ol>
+                </article>
+                <article class="article">
+                    <h4 class="article__title">Front-end</h4>
+                    <ol class="article__items">
+                        <li>JavaScript<span>6 Years</span></li>
+                        <li>HTML<span>5 Years</li>
+                        <li>CSS<span>5 Years</li>
+                        <li>TypeScript<span>3 Years</span></li>
+                        <li>SASS<span>3 Years</span></li>
+                        <li>React<span>3 Years</span></li>
+                        <li>Next.js<span>2 Years</span></li>
+                        <li>Storybook<span>1 Year</span></li>
+                    </ol>
+                </article>
+            </section>
 
-        <section id="education" class="section">
-            <h2 class="section__title">Regulatory Formation</h2>
-            <article class="job">
-                <h3 class="job__title">
-                    Development of Web Applications
-                    <small class="job__title--workplace">at Salesians de Sarrià</small>
-                </h3>
-                <time class="job__timeline">September 2015 - May 2017</time>
-            </article>
-            <article class="job">
-                <h3 class="job__title">
-                    Microinformatic Systems and Networks
-                    <small class="job__title--workplace">at Salesians de Sarrià</small>
-                </h3>
-                <time class="job__timeline">September 2013 - May 2015</time>
-            </article>
-        </section>
+            <section class="section">
+                <h2 class="section__title">Languages</h2>
+                <article class="article">
+                    <ol class="article__items">
+                        <li>Catalan<span>Native</span></li>
+                        <li>Spanish<span>Native</span></li>
+                        <li>English<span>Advanced</span></li>
+                    </ol>
+                </article>
+            </section>
 
-        <section class="section">
-            <h2 class="section__title">Complementary Formation</h2>
-            <article class="job">
-                <h3 class="job__title">
-                    JavaScript Full Stack
-                    <small class="job__title--workplace">at Skylab Coders Academy</small>
-                </h3>
-                <time class="job__timeline">September 2018 - November 2018</time>
-            </article>
-        </section>
-    </main>
+            <section class="section">
+                <h2 class="section__title">Portfolio</h2>
+                <address class="portfolio">
+                    <article>
+                        <div class="qr qr--gitlab"></div>
+                        <a href="https://gitlab.com/aleixcam">GitLab</a>
+                    </article>
+                    <article>
+                        <div class="qr qr--github"></div>
+                        <a href="https://github.com/aleixcam">GitHub</a>
+                    </article>
+                    <article>
+                        <div class="qr qr--npm"></div>
+                        <a href="https://www.npmjs.com/~aleixcam">NPM</a>
+                    </article>
+                    <article>
+                        <div class="qr qr--docker"></div>
+                        <a href="https://hub.docker.com/?namespace=aleixcam">Docker Hub</a>
+                    </article>
+                </address>
+            </section>
+        </aside>
+
+        <main>
+            <section class="section">
+                <h2 class="section__title">Work Experience</h2>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Associate & Tech Lead
+                        <small class="job__workplace">at HexMyth</small>
+                    </h3>
+                    <time class="job__timeline">October 2020 - Present</time>
+                    <ul class="article__items">
+                        <li>Making long-lasting architectural decisions</li>
+                        <li>Creating an API from scratch with Symfony 5 and PHP 7.4</li>
+                        <li>Creating a component library with React and StoryBook</li>
+                        <li>Creating a web front with Next.js and TypeScript</li>
+                        <li>Hexagonal Architecture</li>
+                        <li>Creating Docker images to develop</li>
+                        <li>TDD as a way of life</li>
+                        <li>CI/CD using GitLab pipelines</li>
+                        <li>Use of GitLab Container and Package Registries</li>
+                    </ul>
+                </article>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Full-stack Engineer
+                        <small class="job__workplace">at Meeting Lawyers</small>
+                    </h3>
+                    <time class="job__timeline">January 2023 - July 2023</time>
+                </article>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Back-end Engineer
+                        <small class="job__workplace">at Adevinta</small>
+                    </h3>
+                    <time class="job__timeline">July 2021 - December 2022</time>
+                </article>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Freelancer Back-end Principal
+                        <small class="job__workplace">at Atrox Creative</small>
+                    </h3>
+                    <time class="job__timeline">January 2020 - June 2021</time>
+                </article>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Back-end Developer
+                        <small class="job__workplace">at Deliverea</small>
+                    </h3>
+                    <time class="job__timeline">May 2020 - August 2020</time>
+                    <ul class="article__items">
+                        <li>A bucketload of refactoring</li>
+                        <li>REST APIs with PHP 7 and Symfony</li>
+                        <li>VUEjs and Vuex</li>
+                        <li>Hexagonal Architecture</li>
+                        <li>TDD as a way of life</li>
+                    </ul>
+                </article>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Back-end Developer
+                        <small class="job__workplace">at Atrápalo</small>
+                    </h3>
+                    <time class="job__timeline">January 2019 - April 2020</time>
+                    <ul class="article__items">
+                        <li>Hexagonal Architecture</li>
+                        <li>TDD as a way of life</li>
+                        <li>REST APIs with PHP 7 and Symfony 3 and 4</li>
+                        <li>Mantain a legacy monolith with PHP 5 and Symfony 2</li>
+                        <li>Write reusable components with JS ES6 and SASS</li>
+                        <li>Code revision</li>
+                        <li>Best practices at everything</li>
+                    </ul>
+                </article>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Junior Back-end Developer
+                        <small class="job__workplace">at Buzz MN</small>
+                    </h3>
+                    <time class="job__timeline">March 2017 - June 2018</time>
+                    <ul class="article__items">
+                        <li>Jumpstart a new project with CakePHP</li>
+                        <li>Design and structure a MySQL database</li>
+                        <li>Support to front end</li>
+                    </ul>
+                </article>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Helpdesk Intern
+                        <small class="job__workplace">at NH Hotel Group</small>
+                    </h3>
+                    <time class="job__timeline">February 2015 - June 2015</time>
+                </article>
+            </section>
+
+            <section id="education" class="section">
+                <h2 class="section__title">Regulatory Formation</h2>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Development of Web Applications
+                        <small class="job__workplace">at Salesians de Sarrià</small>
+                    </h3>
+                    <time class="job__timeline">September 2015 - May 2017</time>
+                </article>
+                <article class="article job">
+                    <h3 class="article__title">
+                        Microinformatic Systems and Networks
+                        <small class="job__workplace">at Salesians de Sarrià</small>
+                    </h3>
+                    <time class="job__timeline">September 2013 - May 2015</time>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2 class="section__title">Complementary Formation</h2>
+                <article class="article job">
+                    <h3 class="article__title">
+                        JavaScript Full Stack Bootcamp
+                        <small class="job__workplace">at Skylab Coders Academy</small>
+                    </h3>
+                    <time class="job__timeline">September 2018 - November 2018</time>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <div class="download">
+        <button class="download__button" onclick="javascript:downloadPDF()">Download as PDF</button>
+    </div>
 </body>
 
 </html>
