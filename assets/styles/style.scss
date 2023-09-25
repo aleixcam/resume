@@ -25,7 +25,6 @@ body {
         display: grid;
         margin: auto;
         grid-template: 240px auto / 240px auto;
-        min-height: 1754px;
     }
 
     .profile {
@@ -155,6 +154,9 @@ body {
             margin: 0;
             margin-bottom: 10px;
         }
+    }
+    &:last-of-type {
+        margin-bottom: 0;
     }
 }
 

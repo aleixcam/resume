@@ -7,7 +7,7 @@ const downloadPDF = () => {
 
     doc.html(elementHTML, {
         callback: doc => doc.save('curriculum-vitae.pdf'),
-        margin: [10, 10, 10, 10],
+        margin: [15, 15, 0, 15],
         x: 0,
         y: 0,
         width: 180,

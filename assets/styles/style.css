@@ -11,7 +11,6 @@ body #resume {
   display: grid;
   margin: auto;
   grid-template: 240px auto/240px auto;
-  min-height: 1754px;
 }
 body .profile {
   background-color: #0c7cd5;
@@ -123,6 +122,9 @@ body main {
 .section .article__items {
   margin: 0;
   margin-bottom: 10px;
+}
+.section:last-of-type {
+  margin-bottom: 0;
 }
 
 .sidebar {
