@@ -1,11 +1,11 @@
-window.jsPDF = window.jspdf.jsPDF;
+const jsPDF = window.jspdf.jsPDF;
 
 const downloadPDF = () => {
-    var doc = new jsPDF();
+    const pdf = new jsPDF();
 
-    var elementHTML = document.getElementById("resume");
+    const elementHTML = document.getElementById("resume");
 
-    doc.html(elementHTML, {
+    pdf.html(elementHTML, {
         callback: doc => doc.save('curriculum-vitae.pdf'),
         margin: [15, 15, 0, 15],
         x: 0,

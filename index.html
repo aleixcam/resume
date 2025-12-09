@@ -6,325 +6,372 @@
 
     <link rel="stylesheet" href="assets/styles/style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="assets/js/jspdf.umd.min.js"></script>
+    <script src="assets/js/html2canvas.min.js"></script>
     <script src="assets/js/pdf.js"></script>
 
     <title>Curriculum Vitae</title>
 </head>
 
 <body>
-    <div id="resume">
-        <aside class="profile">
-            <img class="profile__image" src="https://aleixcam.github.io/resume/assets/images/profile.png">
-        </aside>
+<div id="resume">
+    <aside class="profile">
+        <img class="profile__image" src="assets/images/profile.png" alt="profile picture">
+    </aside>
 
-        <header class="contact">
-            <section class="title">
-                <h1 class="title__name">Aleix Caminal i Mallol</h1>
-                <h3 class="title__profession">Software Engineer</h3>
-            </section>
+    <header class="contact">
+        <section class="title">
+            <h1 class="title__name">Aleix Caminal i Mallol</h1>
+            <h3 class="title__profession">Software Engineer</h3>
+        </section>
 
-            <address class="contact-info">
-                <p>Location: Barcelona</p>
-                <p>Email: <a href="mailto:aleixcam96@gmail.com">aleixcam96@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/aleixcam/">www.linkedin.com/in/aleixcam</a></p>
-                <img class="qr" src="https://aleixcam.github.io/resume/assets/images/qr_linkedin.png">
+        <address class="contact-info">
+            <p>Location: Barcelona</p>
+            <p>Email: <a href="mailto:aleixcam96@gmail.com">aleixcam96@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/aleixcam/">www.linkedin.com/in/aleixcam</a></p>
+            <img class="qr" src="assets/images/qr_linkedin.png" alt="LinkedIn qr">
+        </address>
+    </header>
+
+    <aside class="sidebar">
+        <section class="section">
+            <h2 class="section__title">Skill Experience</h2>
+            <article class="article">
+                <h4 class="article__title">Back-end</h4>
+                <ol class="article__items">
+                    <li>PHP<span>7 Years</span></li>
+                    <li>SQL<span>7 Years</span></li>
+                    <li>Symfony<span>5 Years</span></li>
+                    <li>Doctrine<span>5 Years</span></li>
+                    <li>TypeScript<span>4 Years</span></li>
+                    <li>Node<span>4 Years</span></li>
+                    <li>MongoDB<span>4 Years</span></li>
+                    <li>Express<span>3 Years</span></li>
+                    <li>Go<span>2 Years</span></li>
+                    <li>Java<span>2 Years</span></li>
+                    <li>Kotlin<span>2 Years</span></li>
+                    <li>Spring<span>2 Years</span></li>
+                    <li>Mongoose<span>2 Years</span></li>
+                </ol>
+            </article>
+            <article class="article">
+                <h4 class="article__title">Front-end</h4>
+                <ol class="article__items">
+                    <li>JavaScript<span>7 Years</span></li>
+                    <li>HTML<span>7 Years</span></li>
+                    <li>CSS<span>7 Years</span></li>
+                    <li>React<span>4 Years</span></li>
+                    <li>SASS<span>3 Years</span></li>
+                    <li>Next.js<span>2 Years</span></li>
+                    <li>Styled Components<span>2 Years</span></li>
+                    <li>Storybook<span>1 Year</span></li>
+                </ol>
+            </article>
+            <article class="article">
+                <h4 class="article__title">DevOps</h4>
+                <ol class="article__items">
+                    <li>Git<span>7 Years</span></li>
+                    <li>Docker<span>5 Years</span></li>
+                    <li>GitLab CI/CD<span>4 Years</span></li>
+                    <li>AWS<span>2 Years</span></li>
+                    <li>GitHub Actions<span>1 Year</span></li>
+                </ol>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2 class="section__title">Languages</h2>
+            <article class="article">
+                <ol class="article__items">
+                    <li>Catalan<span>Native</span></li>
+                    <li>Spanish<span>Native</span></li>
+                    <li>English<span>Advanced</span></li>
+                </ol>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2 class="section__title">Portfolio</h2>
+            <address class="portfolio">
+                <article>
+                    <img class="qr" src="assets/images/qr_gitlab.png" alt="gitlab qr">
+                    <a href="https://gitlab.com/aleixcam">GitLab</a>
+                </article>
+                <article>
+                    <img class="qr" src="assets/images/qr_github.png" alt="github qr">
+                    <a href="https://github.com/aleixcam">GitHub</a>
+                </article>
+                <article>
+                    <img class="qr" src="assets/images/qr_npm.png" alt="npm qr">
+                    <a href="https://www.npmjs.com/~aleixcam">NPM</a>
+                </article>
+                <article>
+                    <img class="qr" src="assets/images/qr_docker.png"
+                         alt="docker hub qr">
+                    <a href="https://hub.docker.com/?namespace=aleixcam">Docker Hub</a>
+                </article>
             </address>
-        </header>
+        </section>
+    </aside>
 
-        <aside class="sidebar">
-            <section class="section">
-                <h2 class="section__title">Skill Experience</h2>
-                <article class="article">
-                    <h4 class="article__title">Back-end</h4>
-                    <ol class="article__items">
-                        <li>PHP<span>6 Years</span></li>
-                        <li>SQL<span>6 Years</span></li>
-                        <li>Symfony<span>4 Years</span></li>
-                        <li>Doctrine<span>4 Years</span></li>
-                        <li>TypeScript<span>3 Years</span></li>
-                        <li>Node<span>3 Years</li>
-                        <li>Express<span>3 Years</li>
-                        <li>MongoDB<span>3 Years</span></li>
-                        <li>Java<span>2 Years</span></li>
-                        <li>Kotlin<span>2 Years</li>
-                        <li>Spring<span>2 Years</li>
-                        <li>Mongoose<span>2 Years</li>
-                        <li>Go<span>1 Year</li>
-                    </ol>
-                </article>
-                <article class="article">
-                    <h4 class="article__title">Front-end</h4>
-                    <ol class="article__items">
-                        <li>JavaScript<span>6 Years</span></li>
-                        <li>HTML<span>5 Years</li>
-                        <li>CSS<span>5 Years</li>
-                        <li>React<span>3 Years</span></li>
-                        <li>SASS<span>3 Years</span></li>
-                        <li>Next.js<span>2 Years</span></li>
-                        <li>Styled Components<span>1 Year</span></li>
-                        <li>Storybook<span>1 Year</span></li>
-                    </ol>
-                </article>
-                <article class="article">
-                    <h4 class="article__title">DevOps</h4>
-                    <ol class="article__items">
-                        <li>Git<span>6 Years</span></li>
-                        <li>Docker<span>4 Years</li>
-                        <li>GitLab CI/CD<span>3 Years</li>
-                        <li>AWS<span>2 Years</li>
-                        <li>GitHub Actions<span>1 Year</li>
-                    </ol>
-                </article>
-            </section>
+    <main>
+        <section class="section">
+            <h2 class="section__title">Work Experience</h2>
 
-            <section class="section">
-                <h2 class="section__title">Languages</h2>
-                <article class="article">
-                    <ol class="article__items">
-                        <li>Catalan<span>Native</span></li>
-                        <li>Spanish<span>Native</span></li>
-                        <li>English<span>Advanced</span></li>
-                    </ol>
-                </article>
-            </section>
+            <article class="article job">
+                <h3 class="article__title">
+                    Senior Software Engineer
+                    <small class="job__workplace">at Welocalize</small>
+                </h3>
+                <time class="job__timeline">Full Time · March 2025 - Present</time>
+                <div class="job__stack">
+                    <span>Go</span>
+                    <span>TypeScript</span>
+                    <span>Vue.js</span>
+                    <span>PostgreSQL</span>
+                    <span>Docker</span>
+                    <span>AI</span>
+                </div>
+                <ul class="article__items">
+                    <li>Developed new features with the enhanced productivity of AI</li>
+                    <li>Fixed a lot of bugs</li>
+                    <li>Improved the codebase following the Boy Scout Rule</li>
+                    <li>Spearheaded the dockerization of the local environment</li>
+                    <li>Brought new ideas to the team and worked to implement them</li>
+                </ul>
+            </article>
 
-            <section class="section">
-                <h2 class="section__title">Portfolio</h2>
-                <address class="portfolio">
-                    <article>
-                        <img class="qr" src="https://aleixcam.github.io/resume/assets/images/qr_gitlab.png">
-                        <a href="https://gitlab.com/aleixcam">GitLab</a>
-                    </article>
-                    <article>
-                        <img class="qr" src="https://aleixcam.github.io/resume/assets/images/qr_github.png">
-                        <a href="https://github.com/aleixcam">GitHub</a>
-                    </article>
-                    <article>
-                        <img class="qr" src="https://aleixcam.github.io/resume/assets/images/qr_npm.png">
-                        <a href="https://www.npmjs.com/~aleixcam">NPM</a>
-                    </article>
-                    <article>
-                        <img class="qr" src="https://aleixcam.github.io/resume/assets/images/qr_docker.png">
-                        <a href="https://hub.docker.com/?namespace=aleixcam">Docker Hub</a>
-                    </article>
-                </address>
-            </section>
-        </aside>
+            <article class="article job">
+                <h3 class="article__title">
+                    Lead Software Engineer
+                    <small class="job__workplace">at Hexmyth</small>
+                </h3>
+                <time class="job__timeline">Part Time · October 2021 - December 2025</time>
+                <div class="job__stack">
+                    <span>PHP 8</span>
+                    <span>Symfony 5 & 7</span>
+                    <span>Doctrine</span>
+                    <span>TypeScript</span>
+                    <span>React</span>
+                    <span>Next.js</span>
+                    <span>Styled Components</span>
+                    <span>MongoDB</span>
+                    <span>HTML</span>
+                    <span>Docker</span>
+                </div>
+                <ul class="article__items">
+                    <li>Maintained the company's technical infrastructure</li>
+                    <li>Managed a team in order to achieve the company's goals within an organised timeframe</li>
+                    <li>Designed innovative game mechanics for a board game</li>
+                    <li>Developed reusable components with React and Styled Components following an Atomic Design
+                        approach
+                    </li>
+                    <li>Developed APIs following Backend for frontend and Hexagonal architectures</li>
+                    <li>Developed a messaging infrastructure to have workers processing requests to build 3D models</li>
+                </ul>
+            </article>
 
-        <main>
-            <section class="section">
-                <h2 class="section__title">Work Experience</h2>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Software Engineer & Game Designer
-                        <small class="job__workplace">at Hexmyth</small>
-                    </h3>
-                    <time class="job__timeline">Full Time · October 2021 - Present</time>
-                    <div class="job__stack">
-                        <span>PHP 8</span>
-                        <span>Symfony 5</span>
-                        <span>Doctrine</span>
-                        <span>TypeScript</span>
-                        <span>React</span>
-                        <span>Next.js</span>
-                        <span>Styled Components</span>
-                        <span>MongoDB</span>
-                        <span>HTML</span>
-                        <span>Docker</span>
-                    </div>
-                    <ul class="article__items">
-                        <li>Maintained the company's technical infrastructure</li>
-                        <li>Managed a team in order to achieve the company's goals within an organised timeframe</li>
-                        <li>Designed innovative game mechanics for a boardgame</li>
-                        <li>Developed reusable components with React and Styled Components following an Atomic Design approach</li>
-                        <li>Developed APIs following Backend for frontend and Hexagonal architectures</li>
-                    </ul>
-                </article>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Senior Software Engineer
-                        <small class="job__workplace">at Workfully</small>
-                    </h3>
-                    <time class="job__timeline">Temporary · November 2023 - April 2024</time>
-                    <div class="job__stack">
-                        <span>TypeScript</span>
-                        <span>Express</span>
-                        <span>Sequelize</span>
-                        <span>React</span>
-                        <span>Next.js</span>
-                        <span>Styled Components</span>
-                        <span>Pug</span>
-                        <span>MariaDB</span>
-                        <span>HTML</span>
-                        <span>Docker</span>
-                    </div>
-                    <ul class="article__items">
-                        <li>Led the creation of a greenfield API following DDD principles, Hexagonal Architecture and best practices</li>
-                        <li>Contributed to a hands-on culture where every part of the team could develop freely any aspect of the codebase</li>
-                        <li>Drived formation events where the team would refactor an old piece of the codebase to closely follow a SOLID approach</li>
-                        <li>Developed reusable components with React and Styled Components following an Atomic Design approach</li>
-                    </ul>
-                </article>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Senior Software Engineer
-                        <small class="job__workplace">at Meeting Lawyers</small>
-                    </h3>
-                    <time class="job__timeline">Temporary · January 2023 - July 2023</time>
-                    <div class="job__stack">
-                        <span>PHP 8</span>
-                        <span>ES6</span>
-                        <span>React</span>
-                        <span>Laravel 7</span>
-                        <span>Symfony 2 & 4</span>
-                        <span>MySQL</span>
-                        <span>SASS</span>
-                        <span>HTML</span>
-                        <span>Docker</span>
-                        <span>AWS</span>
-                    </div>
-                    <ul class="article__items">
-                        <li>Spearheaded the technological evolution of the various company's front-ends</li>
-                        <li>Developed and refactored microservices in PHP 8 and hexagonal architecture</li>
-                    </ul>
-                </article>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Back-end Engineer
-                        <small class="job__workplace">at Adevinta</small>
-                    </h3>
-                    <time class="job__timeline">Full Time · July 2021 - December 2022</time>
-                    <div class="job__stack">
-                        <span>Kotlin</span>
-                        <span>Spring Boot</span>
-                        <span>Java</span>
-                        <span>PostgreSQL</span>
-                        <span>C#</span>
-                        <span>VB</span>
-                        <span>AWS</span>
-                    </div>
-                    <ul class="article__items">
-                        <li>Developed, refactored and implemented new microservices in Kotlin and hexagonal architecture
-                        </li>
-                        <li>Maintained old solutions in Java, C# and VB</li>
-                    </ul>
-                </article>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Back-end Engineer
-                        <small class="job__workplace">at Atrox Creative</small>
-                    </h3>
-                    <time class="job__timeline">Freelance · January 2020 - June 2021</time>
-                    <div class="job__stack">
-                        <span>Node</span>
-                        <span>ES6</span>
-                        <span>Express</span>
-                        <span>MongoDB</span>
-                        <span>Mongoose</span>
-                        <span>Pug</span>
-                        <span>SASS</span>
-                        <span>HTML</span>
-                        <span>Docker</span>
-                    </div>
-                    <ul class="article__items">
-                        <li>Led the decision-making on technical and architectural concerns of a project from start
-                            to first stable deployment</li>
-                        <li>Led the creation of a Node API, and defined the contracts of communication with the
-                            front end</li>
-                        <li>Dockerized and created the CD pipelines of the project's applications</li>
-                    </ul>
-                </article>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Back-end Developer
-                        <small class="job__workplace">at Atrápalo</small>
-                    </h3>
-                    <time class="job__timeline">Full Time · January 2019 - April 2020</time>
-                    <div class="job__stack">
-                        <span>PHP 5 & 7</span>
-                        <span>Symfony 2, 3 & 4</span>
-                        <span>Doctrine</span>
-                        <span>MySQL</span>
-                        <span>Twig</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Go</span>
-                    </div>
-                    <ul class="article__items">
-                        <li>Developed new microservices in PHP 7, Symfony 4 and hexagonal architecture</li>
-                        <li>Mantained a legacy monolith in PHP 5 and Symfony 2</li>
-                        <li>Developed reusable style components in CSS</li>
-                        <li>Became a table tennis champion at the office</li>
-                    </ul>
-                </article>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Junior Back-end Developer
-                        <small class="job__workplace">at Buzz MN</small>
-                    </h3>
-                    <time class="job__timeline">Full Time · March 2017 - June 2018</time>
-                    <div class="job__stack">
-                        <span>PHP 5 & 7</span>
-                        <span>MySQL</span>
-                        <span>CakePHP</span>
-                        <span>jQuery</span>
-                        <span>HTML</span>
-                    </div>
-                    <ul class="article__items">
-                        <li>Jumpstarted the company's newest project in PHP 7</li>
-                        <li>Designed the database schema for the company's newest project in MySQL</li>
-                        <li>Developed various promotional web pages and landings for clients such as Gas Natural and
-                            CaixaBank</li>
-                    </ul>
-                </article>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Helpdesk
-                        <small class="job__workplace">at NH Hotel Group</small>
-                    </h3>
-                    <time class="job__timeline">Internship · February 2015 - June 2015</time>
-                    <ul class="article__items">
-                        <li>Gave technical support to the employees in the company's HQ</li>
-                    </ul>
-                </article>
-            </section>
+            <article class="article job">
+                <h3 class="article__title">
+                    Senior Software Engineer
+                    <small class="job__workplace">at Workfully</small>
+                </h3>
+                <time class="job__timeline">Temporary · November 2023 - April 2024</time>
+                <div class="job__stack">
+                    <span>TypeScript</span>
+                    <span>Express</span>
+                    <span>Sequelize</span>
+                    <span>React</span>
+                    <span>Next.js</span>
+                    <span>Styled Components</span>
+                    <span>Pug</span>
+                    <span>MariaDB</span>
+                    <span>HTML</span>
+                    <span>Docker</span>
+                </div>
+                <ul class="article__items">
+                    <li>Led the creation of a greenfield API following DDD principles, Hexagonal Architecture and best
+                        practices
+                    </li>
+                    <li>Contributed to a hands-on culture where every part of the team could develop freely any aspect
+                        of the codebase
+                    </li>
+                    <li>Drived formation events where the team would refactor an old piece of the codebase to closely
+                        follow a SOLID approach
+                    </li>
+                    <li>Developed reusable components with React and Styled Components following an Atomic Design
+                        approach
+                    </li>
+                </ul>
+            </article>
 
-            <section class="section">
-                <h2 class="section__title">Regulatory Formation</h2>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Development of Web Applications
-                        <small class="job__workplace">at Salesians de Sarrià</small>
-                    </h3>
-                    <time class="job__timeline">September 2015 - May 2017</time>
-                </article>
-                <article class="article job">
-                    <h3 class="article__title">
-                        Microinformatic Systems and Networks
-                        <small class="job__workplace">at Salesians de Sarrià</small>
-                    </h3>
-                    <time class="job__timeline">September 2013 - May 2015</time>
-                </article>
-            </section>
+            <article class="article job">
+                <h3 class="article__title">
+                    Senior Software Engineer
+                    <small class="job__workplace">at Meeting Lawyers</small>
+                </h3>
+                <time class="job__timeline">Temporary · January 2023 - July 2023</time>
+                <div class="job__stack">
+                    <span>PHP 8</span>
+                    <span>ES6</span>
+                    <span>React</span>
+                    <span>Laravel 7</span>
+                    <span>Symfony 2 & 4</span>
+                    <span>MySQL</span>
+                    <span>SASS</span>
+                    <span>HTML</span>
+                    <span>Docker</span>
+                    <span>AWS</span>
+                </div>
+                <ul class="article__items">
+                    <li>Spearheaded the technological evolution of the various company's front-ends</li>
+                    <li>Developed and refactored microservices in PHP 8 and hexagonal architecture</li>
+                </ul>
+            </article>
 
-            <section class="section">
-                <h2 class="section__title">Complementary Formation</h2>
-                <article class="article job">
-                    <h3 class="article__title">
-                        JavaScript Full Stack Bootcamp
-                        <small class="job__workplace">at Skylab Coders Academy</small>
-                    </h3>
-                    <time class="job__timeline">September 2018 - November 2018</time>
-                </article>
-            </section>
-        </main>
-    </div>
+            <article class="article job">
+                <h3 class="article__title">
+                    Back-end Engineer
+                    <small class="job__workplace">at Adevinta</small>
+                </h3>
+                <time class="job__timeline">Full Time · July 2021 - December 2022</time>
+                <div class="job__stack">
+                    <span>Kotlin</span>
+                    <span>Spring Boot</span>
+                    <span>Java</span>
+                    <span>PostgreSQL</span>
+                    <span>C#</span>
+                    <span>VB</span>
+                    <span>AWS</span>
+                </div>
+                <ul class="article__items">
+                    <li>Developed, refactored and implemented new microservices in Kotlin and hexagonal architecture
+                    </li>
+                    <li>Maintained old solutions in Java, C# and VB</li>
+                </ul>
+            </article>
 
-    <div class="download">
-        <button class="download__button" onclick="javascript:downloadPDF()">Download as PDF</button>
-    </div>
+            <article class="article job">
+                <h3 class="article__title">
+                    Back-end Engineer
+                    <small class="job__workplace">at Atrox Creative</small>
+                </h3>
+                <time class="job__timeline">Freelance · January 2020 - June 2021</time>
+                <div class="job__stack">
+                    <span>Node</span>
+                    <span>ES6</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                    <span>Mongoose</span>
+                    <span>Pug</span>
+                    <span>SASS</span>
+                    <span>HTML</span>
+                    <span>Docker</span>
+                </div>
+                <ul class="article__items">
+                    <li>Led the decision-making on technical and architectural concerns of a project from start
+                        to first stable deployment
+                    </li>
+                    <li>Led the creation of a Node API, and defined the contracts of communication with the
+                        front end
+                    </li>
+                    <li>Dockerized and created the CD pipelines of the project's applications</li>
+                </ul>
+            </article>
+
+            <article class="article job">
+                <h3 class="article__title">
+                    Back-end Developer
+                    <small class="job__workplace">at Atrápalo</small>
+                </h3>
+                <time class="job__timeline">Full Time · January 2019 - April 2020</time>
+                <div class="job__stack">
+                    <span>PHP 5 & 7</span>
+                    <span>Symfony 2, 3 & 4</span>
+                    <span>Doctrine</span>
+                    <span>MySQL</span>
+                    <span>Twig</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Go</span>
+                </div>
+                <ul class="article__items">
+                    <li>Developed new microservices in PHP 7, Symfony 4 and hexagonal architecture</li>
+                    <li>Mantained a legacy monolith in PHP 5 and Symfony 2</li>
+                    <li>Developed reusable style components in CSS</li>
+                    <li>Became a table tennis champion at the office</li>
+                </ul>
+            </article>
+
+            <article class="article job">
+                <h3 class="article__title">
+                    Junior Back-end Developer
+                    <small class="job__workplace">at Buzz MN</small>
+                </h3>
+                <time class="job__timeline">Full Time · March 2017 - June 2018</time>
+                <div class="job__stack">
+                    <span>PHP 5 & 7</span>
+                    <span>MySQL</span>
+                    <span>CakePHP</span>
+                    <span>jQuery</span>
+                    <span>HTML</span>
+                </div>
+                <ul class="article__items">
+                    <li>Jumpstarted the company's newest project in PHP 7</li>
+                    <li>Designed the database schema for the company's newest project in MySQL</li>
+                    <li>Developed various promotional web pages and landings for clients such as Gas Natural and
+                        CaixaBank
+                    </li>
+                </ul>
+            </article>
+
+            <article class="article job">
+                <h3 class="article__title">
+                    Helpdesk
+                    <small class="job__workplace">at NH Hotel Group</small>
+                </h3>
+                <time class="job__timeline">Internship · February 2015 - June 2015</time>
+                <ul class="article__items">
+                    <li>Gave technical support to the employees in the company's HQ</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2 class="section__title">Regulatory Formation</h2>
+            <article class="article job">
+                <h3 class="article__title">
+                    Development of Web Applications
+                    <small class="job__workplace">at Salesians de Sarrià</small>
+                </h3>
+                <time class="job__timeline">September 2015 - May 2017</time>
+            </article>
+
+            <article class="article job">
+                <h3 class="article__title">
+                    Microinformatic Systems and Networks
+                    <small class="job__workplace">at Salesians de Sarrià</small>
+                </h3>
+                <time class="job__timeline">September 2013 - May 2015</time>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2 class="section__title">Complementary Formation</h2>
+            <article class="article job">
+                <h3 class="article__title">
+                    JavaScript Full Stack Bootcamp
+                    <small class="job__workplace">at Skylab Coders Academy</small>
+                </h3>
+                <time class="job__timeline">September 2018 - November 2018</time>
+            </article>
+        </section>
+    </main>
+</div>
+
+<div class="download">
+    <button class="download__button" onclick="downloadPDF()">Download as PDF</button>
+</div>
 </body>
 
 </html>
